@@ -1,7 +1,7 @@
 #ifndef PKIXCXX_HPP
 #define PKIXCXX_HPP
 
-#include <memory>
+#include <vector>
 #include <string>
 
 extern "C"
@@ -17,9 +17,10 @@ extern "C"
         ~pkix();
         int length=2048;
         void generate_keypair(int length);
-        std::string getPubkeyPEM();
-        std::string getPrivkeyPEM();
-        std::unique_ptr<unsigned char[]> getPubkeyDER();
+        std::string getPubPEM();
+        std::string getPrivPEM();
+        std::string getBundlePEM();
+        std::vector<unsigned char> getPubDER();
         void exportPEM();
         char* encrypt();
         char* decrypt();

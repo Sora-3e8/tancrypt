@@ -15,7 +15,7 @@ namespace pkixcxx
     pki = EVP_RSA_gen(length);
   }
 
-  std::string pkix::getPrivkeyPEM()
+  std::string pkix::getPrivPEM()
   {
     if (pki == nullptr) return "";
     
@@ -39,7 +39,7 @@ namespace pkixcxx
     return data_string;
   }
 
-  std::string pkix::getPubkeyPEM()
+  std::string pkix::getPubPEM()
   {
     if (pki == nullptr) return "";
     
@@ -63,16 +63,21 @@ namespace pkixcxx
     delete[] data2;
     return data_string;
   }
-  
-  std::unique_ptr<unsigned char[]> pkix::getPubkeyDER()
+
+  std::string pkix::getBundlePEM()
   {
-    if(pki == nullptr) return std::unique_ptr<unsigned char[]>();
+    return getPubPEM() + getPrivPEM();
+  }
+  
+  std::vector<unsigned char> pkix::getPubDER()
+  {
+    if(pki == nullptr) return std::vector<unsigned char>();
 
     int key_len = i2d_PublicKey(pki, NULL);
-    unsigned char* key_der = new unsigned char[key_len]; 
-    i2d_PublicKey(pki, &key_der);
-
-    return std::unique_ptr<unsigned char[]>(key_der);
+    std::vector<unsigned char> key_der(key_len);
+    unsigned char* pkey = key_der.data();
+    i2d_PublicKey(pki,&pkey);
+    return key_der;
   }
   
   pkix::~pkix()
