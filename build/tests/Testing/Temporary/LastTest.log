@@ -1,0 +1,57 @@
+Start testing: Mar 07 00:27 CET
+----------------------------------------------------------
+1/1 Testing: Pkix create&destroy
+1/1 Test: Pkix create&destroy
+Command: "/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/keypair_test1"
+Directory: /media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests
+"Pkix create&destroy" start time: Mar 07 00:27 CET
+Output:
+----------------------------------------------------------
+-----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCk3LYJkVVMIQlw
+Bok0Y7ogcrtnl2ME7VconHfcMtxJiD+owlKDUL3F5ILBLOhjlqCbU/AeAUQ2w4Rd
+OLDPBPmfftJ6jv1VnaJKE2GPxfEY94HUjyyulshlpJVctau9CRXpgAH64eyahbny
+xCdnUq8IhjEwC9KC5v2/elB+2ej3dLnTInSCcasMLxdrr6iTz8mnbSMrUNk2G/jC
+EiGZ6X19bqrWFhZAfR7ngHpaifBvYYLQ+9hl9qFWyetFQRwlRl+MfbFYEOl/4+oi
+xywlPEM75rsFwWLdlwcm05iumGgM0TugK8aPlSNZymFSz1Tb6gXkBScCPTqFrcVK
+36zIvvxjAgMBAAECggEAT5YCxOSldj5elXd6RdG82Qw5/vy8fvTqhf7e9+yPnmnJ
+PXktpxnTuxQgsQuyVd0xxDpFqN54pS1GmVAUPqQKs13gUuzzTCDwZu0rRGJMjP5y
+7P9/FPtSW4sT1bEX6oZXzySOECR/eWsEBLd/xCfMuoM5fJXAdpP3PDfaYxpkFgy6
+0F9e3sff3IkpZIxWUcq2MKanbcz89RS6emo/7howcEniNMorv5ygo9YFdA9a3lG4
+HmEmH1bWTJEILguzZTfPx9PdtjTGuaNnDVyXSVOGUvmWrp9/AYdozD2tOQvqido+
+pX6sakDh9gS7ypO92rHkpkpkaInjky6Trn4vqX8tFQKBgQDf50eTgkqF7d7DsOdu
+drHNh6k8Ckjs3A/00F4fM/yFSElauIhbk7raj4cyTfkzbIYfMqj1NfSjPHeb9hzs
+wCMbuuLevTaxFQvjchoGb1y+6yQclI/u4kkv7EzBGSz/42L7A30K+ECpuoVt5wBH
+3l+3ms/AxWEYEIYMwFXcFz649wKBgQC8fsH1ay7zyc7s/wRsBaarXL/T+wA0rKpV
+FhC0ZU04NXNccyTp3PY+6yGpGY7fr8NTNS/HF+cuA6uXWkbE9kfBGMk0Kl3DWAR/
+ElyfNiO/o7ZufT+RYvV+SbLkt/tinOJgOF4bsT7Db2KmGDziLIKnAGEVq2r985cY
+erpx4cHI9QKBgQCY+mMsBKQ4N1qxZ6foEE7RN3RIYlqLApwgT1FPjmxlAAumYVhB
+AYF0HQZpN18hZG+K10kbKL853HF4bMI8e9ZA9wJU3wCEIvYZc3cWmHXMt8nXgSWK
+OK96f7+9Wx8kwk55ZFvF5/H+RUMu4NqPP/8z6iEx+2moUHnWMn83PeaL5wKBgChX
+UJd/qvrN9BVQttePlg4SuZNaor6jPYkcQdL54z7mYZwloH7UpXbtx7RzHdrNuRXz
+yhfoC7gTXQP1dDPvKYgwD8+0SYDnM38mpOAGLDx1gzO+Zn5tGXE/wKOmpIyEWwaQ
+ycNPeclF62z0vwMA1616LUz/9NQI8AtzKLf6wwiJAoGBAMzkEqc0bqKweYsh8lJI
+tvM1cFRezqq24dyguKSYfI7Cbd0ZT09Q7/4Whz+6/yH27p3uY5dWtQ0b9ym//hio
+W/9s/Su72uTfaZjxB8bJ90vzyLy46A7ao9lnTF9Dt/TDtKNKlg7wKpp+E9M+gJl5
+6XFtE3J+S6l4aqa+ESRwU21t
+-----END PRIVATE KEY-----
+
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApNy2CZFVTCEJcAaJNGO6
+IHK7Z5djBO1XKJx33DLcSYg/qMJSg1C9xeSCwSzoY5agm1PwHgFENsOEXTiwzwT5
+n37Seo79VZ2iShNhj8XxGPeB1I8srpbIZaSVXLWrvQkV6YAB+uHsmoW58sQnZ1Kv
+CIYxMAvSgub9v3pQftno93S50yJ0gnGrDC8Xa6+ok8/Jp20jK1DZNhv4whIhmel9
+fW6q1hYWQH0e54B6Wonwb2GC0PvYZfahVsnrRUEcJUZfjH2xWBDpf+PqIscsJTxD
+O+a7BcFi3ZcHJtOYrphoDNE7oCvGj5UjWcphUs9U2+oF5AUnAj06ha3FSt+syL78
+YwIDAQAB
+-----END PUBLIC KEY-----
+
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"Pkix create&destroy" end time: Mar 07 00:27 CET
+"Pkix create&destroy" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Mar 07 00:27 CET

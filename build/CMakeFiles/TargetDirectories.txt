@@ -1,0 +1,16 @@
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/pkixcxx.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/test.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/edit_cache.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/rebuild_cache.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/list_install_components.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/install.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/install/local.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/CMakeFiles/install/strip.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/keypair_test1.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/test.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/edit_cache.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/rebuild_cache.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/list_install_components.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/install.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/install/local.dir
+/media/storage/Workspace/Programming/CODE_LAB/C++/pkixcxx/build/tests/CMakeFiles/install/strip.dir
