@@ -2,18 +2,18 @@
 #include <map>
 #include <functional>
 #include <iostream>
-#include "pkixcxx.hpp"
+#include "pkicxx.hpp"
 
 int keyfactoryInit_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   
   return 0;
 }
 
 int keypairGen_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   
   return 0;
@@ -21,7 +21,7 @@ int keypairGen_test()
 
 int keypairRegen_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   key_factory.generate_keypair(2048);
   
@@ -31,7 +31,7 @@ int keypairRegen_test()
 
 int keypairMultigen_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   
   for(int i=0; i<10; i++)
   {
@@ -43,7 +43,7 @@ int keypairMultigen_test()
 
 int privPEM_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   std::string priv = key_factory.getPrivPEM();
   std::cout << priv << std::endl;
@@ -52,7 +52,7 @@ int privPEM_test()
 
 int pubPEM_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   std::string pub = key_factory.getPubPEM();
   std::cout << pub << std::endl;
@@ -61,25 +61,25 @@ int pubPEM_test()
 
 int privDER_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   std::vector<unsigned char> priv_der= key_factory.getPrivDER();
-  std::cout << pkixcxx::DERhexStr(priv_der) << std::endl;
+  std::cout << pkicxx::DERhexStr(priv_der) << std::endl;
   return 0;
 }
 
 int pubDER_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   std::vector<unsigned char> pub_der= key_factory.getPubDER();
-  std::cout << pkixcxx::DERhexStr(pub_der) << std::endl;
+  std::cout << pkicxx::DERhexStr(pub_der) << std::endl;
   return 0;
 }
 
 int bundlePEM_test()
 {
-  pkixcxx::pkix key_factory;
+  pkicxx::pkix key_factory;
   key_factory.generate_keypair(2048);
   std::string bundle = key_factory.getBundlePEM();
   std::cout << bundle << std::endl;
@@ -118,14 +118,14 @@ int main(int argc, char* argv[])
   if ((argc-1) !=1)
   {
     std::cout << "Invalid usage." << std::endl;
-    printUsage("pkixcxx-test");
+    printUsage("pkicxx-test");
     return 1;
   }
   
   if(handler.count(argv[1])!=1)
   {
     std::cout << "Invalid option: " << argv[1] << std::endl;
-    printUsage("pkixcxx-test");
+    printUsage("pkicxx-test");
     return 1;
   }
   

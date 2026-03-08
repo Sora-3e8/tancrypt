@@ -1,12 +1,12 @@
-#ifndef PKIXCXX_HPP
-#define PKIXCXX_HPP
+#ifndef PKICXX_HPP
+#define PKICXX_HPP
 
 #include <vector>
 #include <string>
 
 extern "C" struct evp_pkey_st;
 
-namespace pkixcxx
+namespace pkicxx
 {
 
   std::string DERhexStr(const std::vector<unsigned char> &DER);

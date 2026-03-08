@@ -5,9 +5,9 @@
 #include <openssl/evp.h>
 #include <openssl/pem.h>
 #include <openssl/engine.h>
-#include "pkixcxx.hpp"
+#include "pkicxx.hpp"
 
-namespace pkixcxx
+namespace pkicxx
 {
   pkix::pkix(){}
   void pkix::generate_keypair(int length)
