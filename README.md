@@ -11,6 +11,6 @@
 - [x] PEM string input
 - [x] PEM file export
 - [x] PEM file load
-- [ ] RSA Encrypt
-- [ ] RSA Decrypt
+- [x] RSA Encrypt
+- [x] RSA Decrypt
 - [ ] RSA Sign 
