@@ -145,6 +145,45 @@ int getBundlePEM(char* argv[], int argc)
   return 0;
 }
 
+int loadPrivPEM(char* argv[], int argc)
+{
+  pkicxx::pkic keyc_synth;
+  pkicxx::pkic keyc_loaded;
+  
+  keyc_synth.generate_keypair(2048);
+  keyc_loaded.loadPEMStr(keyc_synth.getPrivPEM().c_str());
+  std::cout << "Priv synth: " << std::endl;
+  std::cout << pkicxx::hexStr(keyc_synth.getPrivDER()) << std::endl;
+  std::cout << "Priv loaded: " << std::endl;
+  std::cout << pkicxx::hexStr(keyc_loaded.getPrivDER()) << std::endl;
+  if(pkicxx::hexStr(keyc_synth.getPrivDER()) != pkicxx::hexStr(keyc_loaded.getPrivDER())) return 1;
+  return 0; 
+}
+
+int loadPubPEM(char* argv[], int argc)
+{
+  pkicxx::pkic keyc_synth;
+  pkicxx::pkic keyc_loaded;
+  
+  keyc_synth.generate_keypair(2048);
+  keyc_loaded.loadPEMStr(keyc_synth.getPubPEM().c_str());
+  if(pkicxx::hexStr(keyc_synth.getPubDER()) != pkicxx::hexStr(keyc_loaded.getPubDER())) return 1;
+
+  return 0; 
+}
+
+int loadBundlePEM(char* argv[], int argc)
+{
+  pkicxx::pkic keyc_synth;
+  pkicxx::pkic keyc_loaded;
+  
+  keyc_synth.generate_keypair(2048);
+  keyc_loaded.loadPEMStr(keyc_synth.getBundlePEM().c_str());
+  if(pkicxx::hexStr(keyc_synth.getPrivDER()) != pkicxx::hexStr(keyc_loaded.getPrivDER())) return 1;
+  if(pkicxx::hexStr(keyc_synth.getPubDER()) != pkicxx::hexStr(keyc_loaded.getPubDER())) return 1;
+
+  return 0; 
+}
 int exportPrivPEM(char* argv[], int argc)
 {
   pkicxx::pkic keyc;
@@ -237,6 +276,9 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--getPubDER", &getPubDER},
   {"--getPrivPEM", &getPrivPEM},
   {"--getPubPEM", &getPubPEM},
+  {"--loadPrivPEM", &loadPrivPEM},
+  {"--loadPubPEM", &loadPubPEM},
+  {"--loadBundlePEM", &loadBundlePEM},
   {"--getBundlePEM", &getBundlePEM},
   {"--importPrivPEM", &importPrivPEM},
   {"--importPubPEM", &importPubPEM},

@@ -8,7 +8,6 @@
 #include <sstream>
 #include <fstream>
 
-
 namespace pkicxx
 {
   pkic::pkic(){}
@@ -75,12 +74,17 @@ namespace pkicxx
     BIO_free(bio);
   }
 
-  // Cannot be const std::string PEM
   void pkic::loadPEMStr(const char* PEM)
   {
-    BIO* bio = BIO_new(BIO_s_mem());
-    //PEM_read_bio_PrivateKey(bio,&key_container,NULL,&PEM);
-    PEM_read_bio_PUBKEY(bio,&key_container,NULL,&PEM);
+    BIO* bio = BIO_new_mem_buf(PEM, strlen(PEM));
+    ::evp_pkey_st* tmp_key = nullptr;
+    tmp_key = PEM_read_bio_PrivateKey(bio, NULL, NULL,NULL);
+    BIO_reset(bio);
+
+    if(tmp_key != nullptr) key_container=tmp_key;
+    if(tmp_key == nullptr) tmp_key = PEM_read_bio_PUBKEY(bio, NULL,NULL,NULL);
+    if(tmp_key != nullptr) key_container = tmp_key;
+
     BIO_free(bio);
   }
 
@@ -102,6 +106,7 @@ namespace pkicxx
     std::string pem_str(len,'\0');
     BIO_read(bio,&pem_str[0],len);
     BIO_free(bio);
+    
     return pem_str;
   }
 
@@ -122,6 +127,7 @@ namespace pkicxx
     std::string pem_str(len,'\0');
     BIO_read(bio,&pem_str[0],len);
     BIO_free(bio);
+
     return pem_str;
   }
 
