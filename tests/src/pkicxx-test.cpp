@@ -61,28 +61,62 @@ int getPubDER(char* argv[], int argc)
   return 0;
 }
 
+
+int loadPrivDER(char* argv[], int argc)
+{
+  pkicxx::pkic key_synth;
+  pkicxx::pkic key_loaded;
+  key_synth.generate_keypair(2048);
+  std::vector<unsigned char> der_synth = key_synth.getPrivDER();
+  key_loaded.loadPrivDER(der_synth);
+  std::vector<unsigned char> der_loaded = key_loaded.getPrivDER();
+  std::cout << "Generated priv hex:" << std::endl;
+  std::cout << pkicxx::hexStr(der_synth) << std::endl;
+  std::cout << "Loaded priv hex:" << std::endl;
+  std::cout << pkicxx::hexStr(der_loaded) << std::endl;
+  
+  if(pkicxx::hexStr(der_synth)!=pkicxx::hexStr(der_loaded)) return 1;
+  return 0;
+}
+
+int loadPubDER(char* argv[], int argc)
+{
+  pkicxx::pkic key_synth;
+  pkicxx::pkic key_loaded;
+  key_synth.generate_keypair(2048);
+  std::vector<unsigned char> der_synth = key_synth.getPubDER();
+  key_loaded.loadPubDER(der_synth);
+  std::vector<unsigned char> der_loaded = key_loaded.getPubDER();
+  std::cout << "Generated pub hex:" << std::endl;
+  std::cout << pkicxx::hexStr(der_synth) << std::endl;
+  std::cout << "Loaded pub hex:" << std::endl;
+  std::cout << pkicxx::hexStr(der_loaded) << std::endl;
+  
+  if(pkicxx::hexStr(der_synth)!=pkicxx::hexStr(der_loaded)) return 1;
+  return 0;
+}
+
 int importPrivPEM(char* argv[], int argc)
 {
   pkicxx::pkic keyc;
   std::cout << "Priv pem: " << argv[2] << std::endl;
-  std::string empty = pkicxx::hexStr(keyc.getPrivDER());
   keyc.importPEM(argv[2]);
   std::string content = pkicxx::hexStr(keyc.getPrivDER());
   std::cout << "Priv hex:" << std::endl;
   std::cout << content << std::endl;
-  if(empty == content) return 1;
+  if(content=="") return 1;
+
   return 0;
 }
 
 int importPubPEM(char* argv[], int argc)
 {
   pkicxx::pkic keyc;
-  std::string empty = pkicxx::hexStr(keyc.getPubDER());
   keyc.importPEM(argv[2]);
   std::string content = pkicxx::hexStr(keyc.getPubDER());
   std::cout << "Pub hex:" << std::endl;
   std::cout << content << std::endl;
-  if(empty == content) return 1;
+  if(content == "") return 1;
   
   return 0;
 }
@@ -102,7 +136,7 @@ int getPrivPEM(char* argv[], int argc)
   std::cout << synth_pem << std::endl;
 
   pkicxx::pkic key_imported;
-  key_synth.generate_keypair(2048);
+  key_imported.importPEM(argv[2]);
   std::string imported_pem = key_imported.getPrivPEM();
   std::cout << "Synthesized Priv PEM:" << std::endl;
   std::cout << imported_pem << std::endl;
@@ -119,7 +153,7 @@ int getPubPEM(char* argv[], int argc)
   std::cout << synth_pem << std::endl;
 
   pkicxx::pkic key_imported;
-  key_synth.importPEM(argv[2]);
+  key_imported.importPEM(argv[2]);
   std::string imported_pem = key_imported.getPubPEM();
   std::cout << "Synthesized Pub PEM:" << std::endl;
   std::cout << imported_pem << std::endl;
@@ -136,7 +170,7 @@ int getBundlePEM(char* argv[], int argc)
   std::cout << synth_pem << std::endl;
 
   pkicxx::pkic key_imported;
-  key_synth.generate_keypair(2048);
+  key_imported.generate_keypair(2048);
   std::string imported_pem = key_imported.getPrivPEM();
   std::cout << "Synthesized Priv PEM:" << std::endl;
   std::cout << imported_pem << std::endl;
@@ -281,6 +315,8 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--pairMultigen", &keypairMultigen},
   {"--getPrivDER", &getPrivDER},
   {"--getPubDER", &getPubDER},
+  {"--loadPrivDER", &loadPrivDER},
+  {"--loadPubDER", &loadPubDER},
   {"--getPrivPEM", &getPrivPEM},
   {"--getPubPEM", &getPubPEM},
   {"--loadPrivPEM", &loadPrivPEM},
