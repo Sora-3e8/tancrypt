@@ -27,6 +27,7 @@ add_test(NAME "PEM bundle export" COMMAND pkicxx-test --exportBundlePEM)
 add_test(NAME "Encrypt" COMMAND pkicxx-test --encrypt)
 add_test(NAME "Decrypt" COMMAND pkicxx-test --decrypt)
 add_test(NAME "Hash" COMMAND pkicxx-test --hash)
+add_test(NAME "Sign" COMMAND pkicxx-test --sign)
 add_custom_command(TARGET pkicxx-test POST_BUILD COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure)
 
 

@@ -307,6 +307,19 @@ int hashTest(char* argv[], int argc)
   return 0;
 }
 
+
+int signTest(char* argv[], int argc)
+{
+  pkicxx::pkic key;
+  key.generate_keypair(2048);
+  std::string my_message = "Hewwo I am signed ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  std::vector<unsigned char> signature = pkicxx::pki::sign(key,payload,pkicxx::hashAlg::SHA256);
+  std::cout<<pkicxx::hexStr(signature)<<std::endl;
+  return 0;
+}
+
 int debugPass(char* argv[], int argc)
 {
   std::cout << "Arg pass: ";
@@ -344,6 +357,7 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--encrypt", &Encrypt_test},
   {"--decrypt", &Decrypt_test},
   {"--hash", &hashTest},
+  {"--sign", &signTest},
   {"--debugTest", &debugPass}
 };
 
