@@ -8,15 +8,15 @@
 
 namespace pkicxx
 {
-  
+    
   std::vector<unsigned char> pki::encrypt(pkic& key,std::vector<unsigned char>& payload)
   {
-    if(key.key_container==nullptr)
+    if(!key.isInitialized())
     {
       throw std::logic_error("[pkicxx::pki::encrypt] The key container was not initialized.");
     }
    
-    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key.key_container,NULL);
+    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key,NULL);
     if(!ctx) return std::vector<unsigned char>();
       
     if (EVP_PKEY_encrypt_init(ctx) <= 0)
@@ -55,12 +55,12 @@ namespace pkicxx
 
   std::vector<unsigned char> pki::decrypt(pkic& key,std::vector<unsigned char>& payload)
   {
-    if(key.key_container==nullptr)
+    if(!key.isInitialized())
     {
       throw std::logic_error("[pkicxx::pki::decrypt] The key container was not initialized.");
     }
 
-    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key.key_container,NULL);
+    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key,NULL);
     if(!ctx) return std::vector<unsigned char>();
     
     if (EVP_PKEY_decrypt_init(ctx) <= 0)
@@ -96,12 +96,12 @@ namespace pkicxx
 
   std::vector<unsigned char> pki::sign(pkic& key,std::vector<unsigned char> &buffer)
   {
-    if(key.key_container == nullptr)
+    if(!key.isInitialized())
     {
       throw std::logic_error("[pkicxx::pki::sign] The key container was not initialized.");
     }
     
-    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key.key_container,NULL);
+    EVP_PKEY_CTX *ctx = EVP_PKEY_CTX_new(key,NULL);
     if(!ctx) return {};
     if (EVP_PKEY_sign_init(ctx) <= 0)
     {

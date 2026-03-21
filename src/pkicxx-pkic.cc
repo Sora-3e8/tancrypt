@@ -16,6 +16,16 @@ namespace pkicxx
   pkic::pkic(){}
   pkic::~pkic(){ if(key_container != nullptr) EVP_PKEY_free(key_container); }
 
+  bool pkic::isInitialized()
+  {
+    return (key_container!=nullptr);
+  }
+
+  pkic::operator evp_pkey_st*()
+  {
+    return key_container;
+  }
+
   void pkic::generate_keypair(int length)
   {
     if(key_container != nullptr) EVP_PKEY_free(key_container);

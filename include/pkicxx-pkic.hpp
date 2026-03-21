@@ -16,6 +16,10 @@ namespace pkicxx
       
       // PKIC pair generators
       void generate_keypair(int length);
+
+      operator evp_pkey_st*();
+
+      bool isInitialized();
             
       // DER loaders
       void loadPrivDER(std::vector<unsigned char>& DER);
@@ -38,6 +42,7 @@ namespace pkicxx
       void exportPrivPEM(const char* file);
       void exportPubPEM(const char* file);
       void exportBundlePEM(const char* file);
+    private:
       ::evp_pkey_st *key_container = nullptr;
   };
 }
