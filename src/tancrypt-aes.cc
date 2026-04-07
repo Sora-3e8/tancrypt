@@ -42,7 +42,7 @@ namespace tancrypt
     std::vector<unsigned char> aes_data(iv_len+buffer.size()+block_size);
 
     // Retrieves random bytes - if needed
-    if (iv_len!=0 && RAND_bytes(aes_data.data(),iv_len)!=1)
+    if (iv_len!=0 && (iv_len<0||RAND_bytes(aes_data.data(),iv_len)!=1))
     {
       unsigned long _err = ERR_get_error();
       throw std::runtime_error("[tancrypt::AES::encrypt] Could not generate random seed\nError "+std::to_string(_err)+", "+ERR_reason_error_string(_err));
