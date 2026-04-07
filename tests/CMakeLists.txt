@@ -29,6 +29,10 @@ add_test(NAME "Decrypt" COMMAND tancrypt-test --decrypt)
 add_test(NAME "Hash" COMMAND tancrypt-test --hash)
 add_test(NAME "Sign" COMMAND tancrypt-test --sign)
 add_test(NAME "Verify" COMMAND tancrypt-test --verify)
+add_test(NAME "AES key constructor v1" COMMAND tancrypt-test --aesKeyInit1)
+add_test(NAME "AES key constructor v2" COMMAND tancrypt-test --aesKeyInit2)
+add_test(NAME "AES encrypt v1" COMMAND tancrypt-test --aesEncryptV1)
+add_test(NAME "AES encrypt v2" COMMAND tancrypt-test --aesEncryptV2)
 add_custom_command(TARGET tancrypt-test POST_BUILD COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure)
 
 

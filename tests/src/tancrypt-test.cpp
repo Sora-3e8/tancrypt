@@ -3,6 +3,8 @@
 #include <functional>
 #include <iostream>
 #include <vector>
+#include "tancrypt-aes-keyc.hpp"
+#include "tancrypt-hash.hpp"
 #include "tancrypt-hashtypes.hpp"
 #include "tancrypt.hpp"
 
@@ -331,6 +333,72 @@ int verifyTest(char* argv[], int argc)
   return res;
 }
 
+int AESKEY_init1Test(char* argv[], int argc)
+{
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  tancrypt::AES::keyc key_variant1(my_keydata,AES::Type::CBC256);
+
+  return 0;
+}
+
+int AESKEY_init2Test(char* argv[], int argc)
+{
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  tancrypt::AES::keyc key_variant2(my_keydata,AES::Type::CBC256,hashAlg::SHA256);
+  
+  return 0;
+}
+
+int AesEncryptV1(char* argv[], int argc)
+{
+
+  std::string my_message = "Hewwo I am secret ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  std::vector<unsigned char> hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
+  tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
+  std::vector<unsigned char>enc_buffer = AES::encrypt(key_variant1, payload);
+
+  std::cout << "Original: " << my_message << std::endl; 
+  std::cout << "Original(hex): " << tancrypt::hexStr(payload) << std::endl; 
+  std::cout << "Encrypted(hex): " << tancrypt::hexStr(enc_buffer) << std::endl;
+  
+  return 0;
+}
+
+
+int AesEncryptV2(char* argv[], int argc)
+{
+  using namespace tancrypt;
+
+  std::string my_message = "Hewwo I am secret ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  tancrypt::AES::keyc key_variant2(my_keydata,AES::Type::CBC256,hashAlg::SHA256);
+  std::vector<unsigned char>enc_buffer = AES::encrypt(key_variant2, payload);
+
+  std::cout << "Original: " << my_message << std::endl; 
+  std::cout << "Original(hex): " << tancrypt::hexStr(payload) << std::endl; 
+  std::cout << "Encrypted(hex): " << tancrypt::hexStr(enc_buffer) << std::endl;
+  
+  return 0;
+}
+
 
 int debugPass(char* argv[], int argc)
 {
@@ -343,6 +411,7 @@ int debugPass(char* argv[], int argc)
 
   return 0;
 }
+
 
 std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
 {
@@ -371,6 +440,10 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--hash", &hashTest},
   {"--sign", &signTest},
   {"--verify", &verifyTest},
+  {"--aesKeyInit1", &AESKEY_init1Test},
+  {"--aesKeyInit2", &AESKEY_init2Test},
+  {"--aesEncryptV1", &AesEncryptV1},
+  {"--aesEncryptV2", &AesEncryptV2},
   {"--debugTest", &debugPass}
 };
 

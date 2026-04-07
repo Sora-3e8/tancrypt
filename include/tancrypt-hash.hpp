@@ -6,7 +6,7 @@
 
 namespace tancrypt
 {
-  std::vector<unsigned char> hash(std::vector<unsigned char> &buffer, hashAlg alg);
+  std::vector<unsigned char> hash(const std::vector<unsigned char> &buffer, hashAlg alg);
 }
 
 #endif
