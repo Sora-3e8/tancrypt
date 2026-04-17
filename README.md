@@ -13,5 +13,5 @@
 # Planned features progress
 - [x] RSA key container and management
 - [x] Basic RSA operationas [encrypt,decrypt,sign and verify]
+- [x] AES [encrypt,decrypt]
 - [ ] Custom data buffer
-- [ ] AES  

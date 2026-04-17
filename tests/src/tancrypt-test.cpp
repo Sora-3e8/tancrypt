@@ -456,6 +456,28 @@ int AesDecryptV2(char* argv[], int argc)
   return 0;
 }
 
+int getNonce_test(char* argv[], int argc)
+{
+  std::string my_message = "Hewwo I am secret ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  std::vector<unsigned char> hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
+  tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
+  std::vector<unsigned char>enc_buffer = AES::encrypt(key_variant1, payload);
+
+  
+  std::vector<unsigned char> nonce_out = tancrypt::AES::getNonce(enc_buffer,AES::Type::CBC256);
+  std::cout << tancrypt::hexStr(nonce_out) << std::endl;
+  
+  return 0;
+}
+
+
 
 int debugPass(char* argv[], int argc)
 {
@@ -503,6 +525,7 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--aesEncryptV2", &AesEncryptV2},
   {"--aesDecryptV1", &AesDecryptV1},
   {"--aesDecryptV2", &AesDecryptV2},
+  {"--getNonce", &getNonce_test},
   {"--debugTest", &debugPass}
 };
 

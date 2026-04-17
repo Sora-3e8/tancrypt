@@ -10,6 +10,7 @@ namespace tancrypt
   {
     std::vector<unsigned char> encrypt(AES::keyc &key_container,std::vector<unsigned char> buffer);
     std::vector<unsigned char> decrypt(AES::keyc &key_container, std::vector<unsigned char> buffer);
+    std::vector<unsigned char> getNonce(std::vector<unsigned char>buffer,AES::Type type);
     class keyc; 
   }
 }

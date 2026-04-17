@@ -1,4 +1,5 @@
 #include "tancrypt-aes.hpp"
+#include "tancrypt-aes-keyc.hpp"
 #include "tancrypt-hash.hpp"
 #include "openssl/evp.h"
 #include "openssl/err.h"
@@ -254,6 +255,21 @@ namespace tancrypt
     // Truncates the overallocated blocks and outputs buffer
     aes_data.resize(out_bufpos);
     return aes_data;
+  }
+
+  std::vector<unsigned char> AES::getNonce(std::vector<unsigned char>buffer, AES::Type type)
+  {
+    if(AES::_aesTypeMap().count(type)==0) throw std::runtime_error("[tancrypt::AES::getNonce] Invalid AES cipher type.");
+    evp_cipher_st* ciph = EVP_CIPHER_fetch(NULL, AES::_aesTypeMap().at(type),NULL);
+    int length = EVP_CIPHER_iv_length(ciph);
+    EVP_CIPHER_free(ciph);
+    
+    if(length==0) throw std::logic_error("[tancrypt::AES::getNonce] Not applicable for given cipher type, nonce not used.");
+    if(length<0) throw std::runtime_error("[tancrypt::AES::getNonce] Critical error, invalid cipher type or nonce not used.");
+    std::vector<unsigned char> nonce_buffer(length);
+    std::copy(buffer.data(),buffer.data()+length,nonce_buffer.data());
+    
+    return nonce_buffer;
   }
     
 }

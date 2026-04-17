@@ -35,6 +35,7 @@ add_test(NAME "AES encrypt v1" COMMAND tancrypt-test --aesEncryptV1)
 add_test(NAME "AES encrypt v2" COMMAND tancrypt-test --aesEncryptV2)
 add_test(NAME "AES decrypt v1" COMMAND tancrypt-test --aesDecryptV1)
 add_test(NAME "AES decrypt v2" COMMAND tancrypt-test --aesDecryptV2)
+add_test(NAME "AES get nonce" COMMAND tancrypt-test --getNonce)
 add_custom_command(TARGET tancrypt-test POST_BUILD COMMAND ${CMAKE_CTEST_COMMAND} --output-on-failure)
 
 
