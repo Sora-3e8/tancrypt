@@ -399,6 +399,63 @@ int AesEncryptV2(char* argv[], int argc)
   return 0;
 }
 
+int AesDecryptV1(char* argv[], int argc)
+{
+
+  std::string my_message = "Hewwo I am secret ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  std::vector<unsigned char> hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
+  tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
+  std::vector<unsigned char>enc_buffer = AES::encrypt(key_variant1, payload);
+
+  std::cout << "Original: " << my_message << std::endl; 
+  std::cout << "Original(hex): " << tancrypt::hexStr(payload) << std::endl; 
+  std::cout << "Encrypted(hex): " << tancrypt::hexStr(enc_buffer) << std::endl;
+
+  std::vector<unsigned char>dec_buffer = AES::decrypt(key_variant1, enc_buffer);
+
+  std::cout << "Decrypted(hex): " << tancrypt::hexStr(dec_buffer) << std::endl;
+  std::cout << "Decrypted: " << dec_buffer.data() << std::endl;
+
+  
+  return 0;
+}
+
+
+int AesDecryptV2(char* argv[], int argc)
+{
+
+  std::string my_message = "Hewwo I am secret ^.^";
+  std::vector<unsigned char> payload(my_message.size());
+  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
+  
+  using namespace tancrypt;  
+  std::string my_key = "Hewwo I am key ^.^";
+  std::vector<unsigned char> my_keydata(my_key.size());
+  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  std::vector<unsigned char> hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
+  tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
+  std::vector<unsigned char>enc_buffer = AES::encrypt(key_variant1, payload);
+
+  std::cout << "Original: " << my_message << std::endl; 
+  std::cout << "Original(hex): " << tancrypt::hexStr(payload) << std::endl; 
+  std::cout << "Encrypted(hex): " << tancrypt::hexStr(enc_buffer) << std::endl;
+
+  std::vector<unsigned char>dec_buffer = AES::decrypt(key_variant1, enc_buffer);
+
+  std::cout << "Decrypted(hex): " << tancrypt::hexStr(dec_buffer) << std::endl;
+  std::cout << "Decrypted: " << dec_buffer.data() << std::endl;
+  if(tancrypt::hexStr(dec_buffer)!=tancrypt::hexStr(payload)) return 1;
+  
+  return 0;
+}
+
 
 int debugPass(char* argv[], int argc)
 {
@@ -444,6 +501,8 @@ std::map<std::string,std::function<int(char* argv[],int argc)>> handler =
   {"--aesKeyInit2", &AESKEY_init2Test},
   {"--aesEncryptV1", &AesEncryptV1},
   {"--aesEncryptV2", &AesEncryptV2},
+  {"--aesDecryptV1", &AesDecryptV1},
+  {"--aesDecryptV2", &AesDecryptV2},
   {"--debugTest", &debugPass}
 };
 
