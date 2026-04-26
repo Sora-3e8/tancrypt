@@ -23,7 +23,7 @@ int main()
 
   // Keypair with key size of 2048 gets generated and our buffer gets encrypted
   tancrypt::RSA::pkic key;
-  key_factory.generate_keypair(2048);
+  key.generate_keypair(2048);
   dutils::dbuffer res = tancrypt::RSA::encrypt(key,payload);
 
   // Check results compared original, hex x  encrypted
