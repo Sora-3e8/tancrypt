@@ -24,23 +24,23 @@ All provided functions are provided as static stateless functions, this simplifi
 
 int main()
 {
-  // Data buffer setup
-  std::string my_message = "Hewwo I am secret ^.^";
-  dutils::dbuffer payload(my_message.size());
-  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data());
+  // Keypair generation
+  tancrypt::RSA::pkic key;
+  key.generate_keypair(2048);
 
-  // Keypair with key size of 2048 gets generated and our buffer gets encrypted
-  tancrypt::RSA::pkic key_store;
-  key_store.generate_keypair(2048);
-  dutils::dbuffer res = tancrypt::RSA::pki::encrypt(key_store,payload);
+  // Preparing example buffer from string
+  dutils::dbuffer payload("Hewwo, I am secret ^.^");
 
-  // Check results compared original, hex x  encrypted
+  // Encrypting data
+  dutils::dbuffer res = tancrypt::RSA::encrypt(key,payload);
+
+  // Debug write into console to see the results
   std::cout << "Original:" << std::endl;
-  std::cout << my_message << std::endl;
-  std::cout << "Hex:" << std::endl;
-  std::cout << tancrypt::hexStr(payload) << std::endl;
+  std::cout << payload.toStr()<< std::endl;
+  std::cout << "Hex::" << std::endl;
+  std::cout << dutils::hexStr(payload) << std::endl;
   std::cout << "Encrypted:" << std::endl;
-  std::cout << tancrypt::hexStr(res) << std::endl;
+  std::cout << dutils::hexStr(res) << std::endl;
 
   return 0;
 }
@@ -65,29 +65,35 @@ int main()
 
 int main()
 {
+  // Generating keypair
   tancrypt::RSA::pkic key;
   key.generate_keypair(2048);
 
-  // Preparing encrypted data 
-  std::string my_message = "Hewwo I am secret ^.^";
-  dutils::dbuffer payload(my_message.size());
-  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data()); 
-  dutils::dbuffer res = tancrypt::RSA::pki::encrypt(key,payload);
-  std::cout << "Original:" << std::endl;
-  std::cout << my_message << std::endl;
-  std::cout << "Hex:" << std::endl;
-  std::cout << tancrypt::hexStr(payload) << std::endl;
-  std::cout << "Encrypted:" << std::endl;
-  std::cout << tancrypt::hexStr(res) << std::endl;
+  // Preparing example data
+  dutils::dbuffer payload("Hewwo, I am secret ^.^");
 
-  // Decrypting the data again
-  dutils::dbuffer res_decrypted = tancrypt::pki::decrypt(key,res);
-  
-  // Debug print to check that the data indeed match
+  // Encrypting the data
+  dutils::dbuffer res = tancrypt::RSA::encrypt(key,payload);
+
+  // Debug log into console - original unencrypted
+  std::cout << "Original:" << std::endl;
+  std::cout << payload.toStr() << std::endl;
+  std::cout << "Hex:" << std::endl;
+  std::cout << dutils::hexStr(payload) << std::endl;
+
+  // Debug log into console - after encrypting  
+  std::cout << "Encrypted:" << std::endl;
+  std::cout << dutils::hexStr(res) << std::endl;
+
+
+  // Decrypting the data
+  dutils::dbuffer res_decrypted = tancrypt::RSA::decrypt(key,res);
+
+  // Debug log into console - after decrypting
   std::cout << "Res decrypted hex:"<< std::endl;
-  std::cout << tancrypt::hexStr(res_decrypted) << std::endl;
+  std::cout << dutils::hexStr(res_decrypted) << std::endl;
   std::cout << "Res decrypted:" << std::endl;
-  std::cout << res_decrypted.data() << std::endl;
+  std::cout << res_decrypted.data() << std::endl
 
   return 0;
 }

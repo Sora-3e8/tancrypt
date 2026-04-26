@@ -1,6 +1,7 @@
 #include "tancrypt-aes-keyc.hpp"
 #include "tancrypt-hashtypes.hpp"
 #include <openssl/evp.h>
+#include <stdexcept>
 
 namespace tancrypt
 {
@@ -13,6 +14,11 @@ namespace tancrypt
       EVP_CIPHER_free(cipher);
     }
 
+    int keyc::getCiphKLen()
+    {
+      if (cipher==nullptr) throw std::logic_error("[tancrypt::AES::keyc::getCiphKLen] Key is not initialized");
+      return EVP_CIPHER_key_length(cipher);
+    }
     
     void keyc::setKey(const dutils::dbuffer &key)
     {

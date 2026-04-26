@@ -23,7 +23,7 @@
     
     
       
-        <title>Helper functions - Tancrypt docs</title>
+        <title>Dutils - Tancrypt docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#helper-functions" class="md-skip">
+        <a href="#dutils" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Helper functions
+              Dutils
             
           </span>
         </div>
@@ -348,34 +348,6 @@
     
   
     From source
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/git-submodule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Git submodule
   
 
     
@@ -718,7 +690,7 @@
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -736,7 +708,7 @@
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -762,22 +734,100 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tancrypthexstr" class="md-nav__link">
+  <a href="#dutilsdbuffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hexStr
+        dutils::dbuffer
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="tancrypt::hexStr">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilsdbuffer-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer constructors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::dbuffer constructors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tancrypthexstrconst-stdvectorunsigned-char-data" class="md-nav__link">
+  <a href="#dutilsdbufferstdinitializer_listunsinged-int-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hexStr(const std::vector&lt;unsigned char&gt; &amp;data)
+        dutils::dbuffer(std::initializer_list&lt;unsinged int&gt; list)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dutilsdbufferstdvectorunsigned-char-dbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer(std::vector&lt;unsigned char&gt; dbuffer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilsdbuffer-member-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer Member methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::dbuffer Member methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dutilsdbuffertostr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer::toStr()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilshexstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::hexStr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::hexStr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dutilshexstrconst-dutilsdbuffer-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::hexStr(const dutils::dbuffer &amp;data)
       
     </span>
   </a>
@@ -914,22 +964,100 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tancrypthexstr" class="md-nav__link">
+  <a href="#dutilsdbuffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hexStr
+        dutils::dbuffer
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="tancrypt::hexStr">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilsdbuffer-constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer constructors
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::dbuffer constructors">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tancrypthexstrconst-stdvectorunsigned-char-data" class="md-nav__link">
+  <a href="#dutilsdbufferstdinitializer_listunsinged-int-list" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hexStr(const std::vector&lt;unsigned char&gt; &amp;data)
+        dutils::dbuffer(std::initializer_list&lt;unsinged int&gt; list)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dutilsdbufferstdvectorunsigned-char-dbuffer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer(std::vector&lt;unsigned char&gt; dbuffer)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilsdbuffer-member-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer Member methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::dbuffer Member methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dutilsdbuffertostr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::dbuffer::toStr()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dutilshexstr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::hexStr
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dutils::hexStr">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dutilshexstrconst-dutilsdbuffer-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dutils::hexStr(const dutils::dbuffer &amp;data)
       
     </span>
   </a>
@@ -961,16 +1089,59 @@
   
 
 
-<h1 id="helper-functions">Helper functions</h1>
-<p>Helpful utility functions, good for debugging and other processes.<br />
-These functions live in <code class="language-cpp highlight"><span class="k">namespace</span><span class="w"> </span><span class="nn">tancrypt</span></code>.</p>
-<h2 id="tancrypthexstr"><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span></code></h2>
-<p>This function provides an easy way to convert data into string interpretation of hex values.<br />
-Useful when you want to print out or compare buffers with non-string data.  </p>
-<h3 id="tancrypthexstrconst-stdvectorunsigned-char-data"><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></h3>
+<h1 id="dutils">Dutils</h1>
+<p>Helpful utilities, provides custom data buffer and data utility functions.  </p>
+<h2 id="dutilsdbuffer"><code>dutils::dbuffer</code></h2>
+<p>Useful class for storing data it's based on <code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span></code>, main advantage is that dutils::dbuffer provides easy conversion from string and back.</p>
+<h2 id="dutilsdbuffer-constructors"><code>dutils::dbuffer constructors</code></h2>
+<p>Dbuffer supports various construction methods.</p>
+<h3 id="dutilsdbufferstdinitializer_listunsinged-int-list"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="n">unsinged</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="p">)</span></code></h3>
+<p>Equivalent to <code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">3.</span><span class="p">..};</span></code></p>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code class="language-cpp highlight"><span class="k">const</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span></code> - The input data buffer.</li>
+<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">initializer_list</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span></code> - Input data</li>
+</ul>
+</li>
+<li><strong>Returns:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">buffer</span></code></li>
+</ul>
+</li>
+</ul>
+<h3 id="dutilsdbufferstdvectorunsigned-char-dbuffer"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">dbuffer</span><span class="p">)</span></code></h3>
+<p>Copies data from <code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span></code> to newly created blank dbuffer,
+this is primarily for compatibility purposes, but direct construction of <code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span></code> is more efficient.</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">unsinged</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span></code> - Buffer to copy</li>
+</ul>
+</li>
+<li><strong>Returns:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">buffer</span></code></li>
+</ul>
+</li>
+</ul>
+<h2 id="dutilsdbuffer-member-methods"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span></code> Member methods</h2>
+<h3 id="dutilsdbuffertostr"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">::</span><span class="n">toStr</span><span class="p">()</span></code></h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that the dbuffer contents are not checked for string safety,
+thus when converting you must handle possible nullterminators yourself.</p>
+</div>
+<p>Converts dbuffer contents to string</p>
+<ul>
+<li><strong>Parametrs:</strong></li>
+<li><strong>Returns:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">buffer_stringified</span></code></li>
+</ul>
+</li>
+</ul>
+<h2 id="dutilshexstr"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span></code></h2>
+<p>This function provides an easy way to convert data into string interpretation of hex values.<br />
+Useful when you want to print out or compare buffers with non-string data.  </p>
+<h3 id="dutilshexstrconst-dutilsdbuffer-data"><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span><span class="p">)</span></code></h3>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="k">const</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">data</span></code> - The input data buffer.</li>
 </ul>
 </li>
 <li><strong>Returns:</strong><ul>

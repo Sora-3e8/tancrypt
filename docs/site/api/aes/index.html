@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../../install/git-submodule/">
+        <link rel="prev" href="../../install/source/">
       
       
         <link rel="next" href="../keyc/">
@@ -361,34 +361,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/git-submodule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Git submodule
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -584,10 +556,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesencryptaeskeyc-key_container-stdvectorunsigned-char-buffer" class="md-nav__link">
+  <a href="#aesencryptaeskeyc-key_container-dutilsdbuffer-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::encrypt(AES::keyc &amp;key_container, std::vector&lt;unsigned char&gt; &amp;buffer)
+        AES::encrypt(AES::keyc &amp;key_container, dutils::dbuffer &amp;buffer)
       
     </span>
   </a>
@@ -612,10 +584,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesdecryptaeskeyc-key_container-stdvectorunsigned-char-buffer" class="md-nav__link">
+  <a href="#aesdecryptaeskeyc-key_container-dutilsdbuffer-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::decrypt(AES::keyc &amp;key_container, std::vector&lt;unsigned char&gt; &amp;buffer)
+        AES::decrypt(AES::keyc &amp;key_container, dutils::dbuffer &amp;buffer)
       
     </span>
   </a>
@@ -640,10 +612,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesgetnoncestdvectorunsigned-char-bufferaestype-type" class="md-nav__link">
+  <a href="#aesgetnoncedutilsdbuffer-bufferaestype-type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::getNonce(std::vector&lt;unsigned char&gt; buffer,AES::Type type)
+        AES::getNonce(dutils::dbuffer buffer,AES::Type type)
       
     </span>
   </a>
@@ -846,14 +818,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../helpers/" class="md-nav__link">
+      <a href="../dutils/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -1006,10 +978,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesencryptaeskeyc-key_container-stdvectorunsigned-char-buffer" class="md-nav__link">
+  <a href="#aesencryptaeskeyc-key_container-dutilsdbuffer-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::encrypt(AES::keyc &amp;key_container, std::vector&lt;unsigned char&gt; &amp;buffer)
+        AES::encrypt(AES::keyc &amp;key_container, dutils::dbuffer &amp;buffer)
       
     </span>
   </a>
@@ -1034,10 +1006,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesdecryptaeskeyc-key_container-stdvectorunsigned-char-buffer" class="md-nav__link">
+  <a href="#aesdecryptaeskeyc-key_container-dutilsdbuffer-buffer" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::decrypt(AES::keyc &amp;key_container, std::vector&lt;unsigned char&gt; &amp;buffer)
+        AES::decrypt(AES::keyc &amp;key_container, dutils::dbuffer &amp;buffer)
       
     </span>
   </a>
@@ -1062,10 +1034,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#aesgetnoncestdvectorunsigned-char-bufferaestype-type" class="md-nav__link">
+  <a href="#aesgetnoncedutilsdbuffer-bufferaestype-type" class="md-nav__link">
     <span class="md-ellipsis">
       
-        AES::getNonce(std::vector&lt;unsigned char&gt; buffer,AES::Type type)
+        AES::getNonce(dutils::dbuffer buffer,AES::Type type)
       
     </span>
   </a>
@@ -1100,19 +1072,48 @@
 <h1 id="aes">AES</h1>
 <h2 id="overview">Overview</h2>
 <p>This namespace provides basic AES cryptographic operations, depends AES::keyc.
-For proper use, also check documentation of AES::keyc.
+For proper use, also check documentation of AES::keyc.</p>
+<p>Example usage:
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">payload</span><span class="p">(</span><span class="s">&quot;Hewwo, I am secret &gt;.&lt;&quot;</span><span class="p">);</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="c1">// Makes life easier as it shortens tancrypt::AES --&gt; AES:: </span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">tancrypt</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="c1">// Setting up symmetric key - key is not padded/prehashed/derived, so keyc&#39;s hashing will need to be used</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">my_keydata</span><span class="p">(</span><span class="s">&quot;Hewwo, I am key ^.^&quot;</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="c1">// We enabled hashing here by adding hashAlg::SHA256</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="nf">key_variant2</span><span class="p">(</span><span class="n">my_keydata</span><span class="p">,</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">CBC256</span><span class="p">,</span><span class="n">hashAlg</span><span class="o">::</span><span class="n">SHA256</span><span class="p">);</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">enc_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AES</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key_variant2</span><span class="p">,</span><span class="w"> </span><span class="n">payload</span><span class="p">);</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Original: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">payload</span><span class="p">.</span><span class="n">toStr</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Original(hex): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"> </span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Encrypted(hex): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">enc_buffer</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">dec_buffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">AES</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key_variant2</span><span class="p">,</span><span class="w"> </span><span class="n">enc_buffer</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Decrypted(hex): &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">dec_buffer</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Decrypted: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dec_buffer</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w">  </span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">}</span>
+</span></code></pre></div>
 </br>
 </br>
 </br>
 </br></p>
 <h2 id="aesencrypt"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">encrypt</span></code></h2>
-<h3 id="aesencryptaeskeyc-key_container-stdvectorunsigned-char-buffer"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">)</span></code></h3>
+<h3 id="aesencryptaeskeyc-key_container-dutilsdbuffer-buffer"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="p">,</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">)</span></code></h3>
 <ul>
-<li><strong>Parameters:</strong></li>
+<li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">AES</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">preloaded</span><span class="w"> </span><span class="n">credentials</span></code></li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">encrypt</span></code></li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">encrypt</span></code></li>
+</ul>
+</li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AES_DATA</span></code> - Encrypted buffer
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">AES_DATA</span></code> - Encrypted buffer
 </br>
 </br>
 </br>
@@ -1121,13 +1122,15 @@ For proper use, also check documentation of AES::keyc.
 </li>
 </ul>
 <h2 id="aesdecrypt"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">decrypt</span></code></h2>
-<h3 id="aesdecryptaeskeyc-key_container-stdvectorunsigned-char-buffer"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">)</span></code></h3>
+<h3 id="aesdecryptaeskeyc-key_container-dutilsdbuffer-buffer"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="p">,</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">)</span></code></h3>
 <ul>
-<li><strong>Parameters:</strong></li>
+<li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">AES</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">preloaded</span><span class="w"> </span><span class="n">credentials</span></code></li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">decrypt</span></code></li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">decrypt</span></code></li>
+</ul>
+</li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">AES_DATA</span></code> - Decrypted buffer
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">AES_DATA</span></code> - Decrypted buffer
 </br>
 </br>
 </br>
@@ -1141,13 +1144,13 @@ For proper use, also check documentation of AES::keyc.
 <p>Please note that this should be only used for ciphers where it's applicable, otherwise logic error exception<br />
 "Not applicable" is thrown.</p>
 </div>
-<h3 id="aesgetnoncestdvectorunsigned-char-bufferaestype-type"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">getNonce</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></h3>
+<h3 id="aesgetnoncedutilsdbuffer-bufferaestype-type"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">getNonce</span><span class="p">(</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">buffer</span><span class="p">,</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></h3>
 <ul>
 <li><strong>Parameters:</strong></li>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="o">&amp;</span><span class="n">key_container</span></code> - AES key with preloaded credentials</li>
 <li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span></code> - Type of the AES cipher, needed to determine nonce/IV length</li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">nonce_buffer</span></code> - Nonce/IV buffer</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">nonce_buffer</span></code> - Nonce/IV buffer</li>
 </ul>
 </li>
 </ul>

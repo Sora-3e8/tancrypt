@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iostream>
 #include <functional>
+#include "tancrypt-hashtypes.hpp"
 #include "tancrypt.hpp"
 
 int pkicInit(char* argv[], int argc)
@@ -376,9 +377,7 @@ int AesDecryptV1(char* argv[], int argc)
   dutils::dbuffer payload("Hewwo, I am secret >.<");
   
   using namespace tancrypt;  
-  std::string my_key = "Hewwo I am key ^.^";
-  dutils::dbuffer my_keydata(my_key.size());
-  std::copy(my_key.data(),my_key.data()+my_key.size(),my_keydata.data());
+  dutils::dbuffer my_keydata("Hewwo, I am key ^.^");
   dutils::dbuffer hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
   tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
   dutils::dbuffer enc_buffer = AES::encrypt(key_variant1, payload);
@@ -403,15 +402,14 @@ int AesDecryptV2(char* argv[], int argc)
   
   using namespace tancrypt;  
   dutils::dbuffer my_keydata("Hewwo, I am key ^.^");
-  dutils::dbuffer hashed_key = tancrypt::hash(my_keydata , hashAlg::SHA256);
-  tancrypt::AES::keyc key_variant1(hashed_key,AES::Type::CBC256);
-  dutils::dbuffer enc_buffer = AES::encrypt(key_variant1, payload);
+  tancrypt::AES::keyc key_variant2(my_keydata,AES::Type::CBC256,hashAlg::SHA256);
+  dutils::dbuffer enc_buffer = AES::encrypt(key_variant2, payload);
 
   std::cout << "Original: " << payload.toStr() << std::endl; 
   std::cout << "Original(hex): " << dutils::hexStr(payload) << std::endl; 
   std::cout << "Encrypted(hex): " << dutils::hexStr(enc_buffer) << std::endl;
 
-  dutils::dbuffer dec_buffer = AES::decrypt(key_variant1, enc_buffer);
+  dutils::dbuffer dec_buffer = AES::decrypt(key_variant2, enc_buffer);
 
   std::cout << "Decrypted(hex): " << dutils::hexStr(dec_buffer) << std::endl;
   std::cout << "Decrypted: " << dec_buffer.data() << std::endl;

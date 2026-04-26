@@ -51,6 +51,7 @@ namespace tancrypt
         const hashAlg getHashAlg();
         const bool getHashEnabled();
         void setKey(const dutils::dbuffer &key);
+        int getCiphKLen();
         const dutils::dbuffer &getKey();
         evp_cipher_st* cipher = nullptr;
         

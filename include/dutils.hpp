@@ -15,15 +15,12 @@ namespace dutils
         dbuffer() : std::vector<unsigned char>(){}
         dbuffer(int size) : std::vector<unsigned char>(size){}
         dbuffer(std::vector<unsigned char> vec) : std::vector<unsigned char>(vec){}
+        dbuffer(std::string s_data) : std::vector<unsigned char>(s_data.begin(),s_data.end()){}
         dbuffer(std::initializer_list<unsigned char> list) : std::vector<unsigned char>(list){}
         std::string toStr()
         {
           std::string str(this->data(),this->data()+this->size());
           return str;
-        }
-        dbuffer(std::string s_data) : std::vector<unsigned char>(s_data.size())
-        {
-          std::copy(s_data.data(),s_data.data()+s_data.size(),this->data());
         }
   };
 

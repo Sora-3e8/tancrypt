@@ -361,34 +361,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/git-submodule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Git submodule
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -695,10 +667,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsaencryptpkic-keystdvectorunsigned-char-payload" class="md-nav__link">
+  <a href="#rsaencryptpkic-keydutilsdbuffer-payload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::encrypt(pkic&amp; key,std::vector&lt;unsigned char&gt;&amp; payload)
+        RSA::encrypt(pkic&amp; key,dutils::dbuffer&amp; payload)
       
     </span>
   </a>
@@ -734,10 +706,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsadecryptpkic-keystdvectorunsigned-char-payload" class="md-nav__link">
+  <a href="#rsadecryptpkic-keydutilsdbuffer-payload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::decrypt(pkic&amp; key,std::vector&lt;unsigned char&gt;&amp; payload)
+        RSA::decrypt(pkic&amp; key,dutils::dbuffer&amp; payload)
       
     </span>
   </a>
@@ -773,10 +745,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsasignpkic-keystdvectorunsigned-char-buffer-hashalg-alg" class="md-nav__link">
+  <a href="#rsasignpkic-keydutilsdbuffer-buffer-hashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::sign(pkic&amp; key,std::vector&lt;unsigned char&gt; &amp;buffer, hashAlg alg)
+        RSA::sign(pkic&amp; key,dutils::dbuffer &amp;buffer, hashAlg alg)
       
     </span>
   </a>
@@ -812,10 +784,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsaverifypkic-key-stdvectorunsigned-charsig-stdvectorunsigned-char-buffer-hashalg-alg" class="md-nav__link">
+  <a href="#rsaverifypkic-key-dutilsdbuffersig-dutilsdbuffer-buffer-hashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::verify(pkic&amp; key, std::vector&lt;unsigned char&gt;&amp;sig, std::vector&lt;unsigned char&gt; &amp;buffer, hashAlg alg)
+        RSA::verify(pkic&amp; key, dutils::dbuffer&amp;sig, dutils::dbuffer &amp;buffer, hashAlg alg)
       
     </span>
   </a>
@@ -918,14 +890,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../helpers/" class="md-nav__link">
+      <a href="../dutils/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -1078,10 +1050,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsaencryptpkic-keystdvectorunsigned-char-payload" class="md-nav__link">
+  <a href="#rsaencryptpkic-keydutilsdbuffer-payload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::encrypt(pkic&amp; key,std::vector&lt;unsigned char&gt;&amp; payload)
+        RSA::encrypt(pkic&amp; key,dutils::dbuffer&amp; payload)
       
     </span>
   </a>
@@ -1117,10 +1089,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsadecryptpkic-keystdvectorunsigned-char-payload" class="md-nav__link">
+  <a href="#rsadecryptpkic-keydutilsdbuffer-payload" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::decrypt(pkic&amp; key,std::vector&lt;unsigned char&gt;&amp; payload)
+        RSA::decrypt(pkic&amp; key,dutils::dbuffer&amp; payload)
       
     </span>
   </a>
@@ -1156,10 +1128,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsasignpkic-keystdvectorunsigned-char-buffer-hashalg-alg" class="md-nav__link">
+  <a href="#rsasignpkic-keydutilsdbuffer-buffer-hashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::sign(pkic&amp; key,std::vector&lt;unsigned char&gt; &amp;buffer, hashAlg alg)
+        RSA::sign(pkic&amp; key,dutils::dbuffer &amp;buffer, hashAlg alg)
       
     </span>
   </a>
@@ -1195,10 +1167,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rsaverifypkic-key-stdvectorunsigned-charsig-stdvectorunsigned-char-buffer-hashalg-alg" class="md-nav__link">
+  <a href="#rsaverifypkic-key-dutilsdbuffersig-dutilsdbuffer-buffer-hashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        RSA::verify(pkic&amp; key, std::vector&lt;unsigned char&gt;&amp;sig, std::vector&lt;unsigned char&gt; &amp;buffer, hashAlg alg)
+        RSA::verify(pkic&amp; key, dutils::dbuffer&amp;sig, dutils::dbuffer &amp;buffer, hashAlg alg)
       
     </span>
   </a>
@@ -1250,15 +1222,15 @@
 </br>
 </br></p>
 <h2 id="rsaencrypt"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">encrypt</span></code></h2>
-<h3 id="rsaencryptpkic-keystdvectorunsigned-char-payload"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span></code></h3>
+<h3 id="rsaencryptpkic-keydutilsdbuffer-payload"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span></code></h3>
 <ul>
 <li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key</span></code> - Key container (priv/pubkey must be loaded)</li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">payload</span></code> - Data buffer to encrypt</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span></code> - Data buffer to encrypt</li>
 </ul>
 </li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span></code> - Encrypted data buffer</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span></code> - Encrypted data buffer</li>
 </ul>
 </li>
 </ul>
@@ -1290,23 +1262,23 @@
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="p">{</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="c1">// Data buffer setup</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">my_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hewwo I am secret ^.^&quot;</span><span class="p">;</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">payload</span><span class="p">(</span><span class="n">my_message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">my_message</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="n">my_message</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="o">+</span><span class="n">my_message</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="n">payload</span><span class="p">.</span><span class="n">data</span><span class="p">());</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="c1">// Keypair with key size of 2048 gets generated and our buffer gets encrypted</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">  </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key_store</span><span class="p">;</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="n">key_store</span><span class="p">.</span><span class="n">generate_keypair</span><span class="p">(</span><span class="mi">2048</span><span class="p">);</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pki</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key_store</span><span class="p">,</span><span class="n">payload</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">  </span><span class="c1">// Keypair generation</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">  </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">  </span><span class="n">key</span><span class="p">.</span><span class="n">generate_keypair</span><span class="p">(</span><span class="mi">2048</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">  </span><span class="c1">// Preparing example buffer from string</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">payload</span><span class="p">(</span><span class="s">&quot;Hewwo, I am secret ^.^&quot;</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">  </span><span class="c1">// Encrypting data</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">payload</span><span class="p">);</span>
 </span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="c1">// Check results compared original, hex x  encrypted</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">  </span><span class="c1">// Debug write into console to see the results</span>
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Original:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">my_message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hex:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">payload</span><span class="p">.</span><span class="n">toStr</span><span class="p">()</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hex::&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Encrypted:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22"></a>
 </span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="p">}</span>
@@ -1316,15 +1288,15 @@
 </br>
 </br></p>
 <h2 id="rsadecrypt"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">decrypt</span></code></h2>
-<h3 id="rsadecryptpkic-keystdvectorunsigned-char-payload"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span></code></h3>
+<h3 id="rsadecryptpkic-keydutilsdbuffer-payload"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span><span class="p">)</span></code></h3>
 <ul>
 <li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span></code> - Key container (Must contain private key)</li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">payload</span></code> - Encrypted data buffer</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">payload</span></code> - Encrypted data buffer</li>
 </ul>
 </li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span></code> - Decrypted data buffer</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span></code> - Decrypted data buffer</li>
 </ul>
 </li>
 </ul>
@@ -1358,52 +1330,64 @@
 <span class="normal"><a href="#__codelineno-1-27">27</a></span>
 <span class="normal"><a href="#__codelineno-1-28">28</a></span>
 <span class="normal"><a href="#__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#__codelineno-1-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;tancrypt.hpp&quot;</span>
+<span class="normal"><a href="#__codelineno-1-30">30</a></span>
+<span class="normal"><a href="#__codelineno-1-31">31</a></span>
+<span class="normal"><a href="#__codelineno-1-32">32</a></span>
+<span class="normal"><a href="#__codelineno-1-33">33</a></span>
+<span class="normal"><a href="#__codelineno-1-34">34</a></span>
+<span class="normal"><a href="#__codelineno-1-35">35</a></span>
+<span class="normal"><a href="#__codelineno-1-36">36</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;tancrypt.hpp&quot;</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2"></a>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="p">{</span>
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
-</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="n">key</span><span class="p">.</span><span class="n">generate_keypair</span><span class="p">(</span><span class="mi">2048</span><span class="p">);</span>
-</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">  </span><span class="c1">// Preparing encrypted data </span>
-</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">my_message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Hewwo I am secret ^.^&quot;</span><span class="p">;</span>
-</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">payload</span><span class="p">(</span><span class="n">my_message</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
-</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">copy</span><span class="p">(</span><span class="n">my_message</span><span class="p">.</span><span class="n">data</span><span class="p">(),</span><span class="n">my_message</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="o">+</span><span class="n">my_message</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="n">payload</span><span class="p">.</span><span class="n">data</span><span class="p">());</span><span class="w"> </span>
-</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pki</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">payload</span><span class="p">);</span>
-</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Original:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">my_message</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hex:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Encrypted:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a>
-</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">  </span><span class="c1">// Decrypting the data again</span>
-</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">res_decrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">pki</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">res</span><span class="p">);</span>
-</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a>
-</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">  </span><span class="c1">// Debug print to check that the data indeed match</span>
-</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Res decrypted hex:&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res_decrypted</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Res decrypted:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
-</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res_decrypted</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">  </span><span class="c1">// Generating keypair</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">  </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">  </span><span class="n">key</span><span class="p">.</span><span class="n">generate_keypair</span><span class="p">(</span><span class="mi">2048</span><span class="p">);</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">  </span><span class="c1">// Preparing example data</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">payload</span><span class="p">(</span><span class="s">&quot;Hewwo, I am secret ^.^&quot;</span><span class="p">);</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11"></a>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">  </span><span class="c1">// Encrypting the data</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">res</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">encrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">payload</span><span class="p">);</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14"></a>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">  </span><span class="c1">// Debug log into console - original unencrypted</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Original:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">payload</span><span class="p">.</span><span class="n">toStr</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Hex:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">payload</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20"></a>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">  </span><span class="c1">// Debug log into console - after encrypting  </span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Encrypted:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24"></a>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25"></a>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">  </span><span class="c1">// Decrypting the data</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">res_decrypted</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">decrypt</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">res</span><span class="p">);</span>
 </span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28"></a>
-</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="p">}</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">  </span><span class="c1">// Debug log into console - after decrypting</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Res decrypted hex:&quot;</span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">res_decrypted</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Res decrypted:&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">res_decrypted</span><span class="p">.</span><span class="n">data</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34"></a>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36"></a><span class="p">}</span>
 </span></code></pre></div></td></tr></table></div>
 </br>
 </br>
 </br>
 </br></p>
 <h2 id="rsasign"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">sign</span></code></h2>
-<h3 id="rsasignpkic-keystdvectorunsigned-char-buffer-hashalg-alg"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">sign</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
+<h3 id="rsasignpkic-keydutilsdbuffer-buffer-hashalg-alg"><code class="language-cpp highlight"><span class="n">RSA</span><span class="o">::</span><span class="n">sign</span><span class="p">(</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">,</span><span class="w"> </span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
 <ul>
 <li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="w"> </span><span class="n">key</span></code> - key container (must contain private key)</li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span></code> - The data to be signed</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span></code> - The data to be signed</li>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span></code> - Hashing algorithm to use for the digest</li>
 </ul>
 </li>
 <li><strong>Returns:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span></code> - Data signature</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span></code> - Data signature</li>
 </ul>
 </li>
 </ul>
@@ -1433,10 +1417,10 @@
 </span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">  </span><span class="n">key_store</span><span class="p">.</span><span class="n">generate_keypair</span><span class="p">(</span><span class="mi">2048</span><span class="p">);</span>
 </span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7"></a>
 </span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;I confirm this transaction.&quot;</span><span class="p">;</span>
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">data</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">data</span><span class="p">(</span><span class="n">message</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">message</span><span class="p">.</span><span class="n">end</span><span class="p">());</span>
 </span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10"></a>
 </span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">  </span><span class="c1">// Signing the data using SHA256</span>
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="n">signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pki</span><span class="o">::</span><span class="n">sign</span><span class="p">(</span><span class="n">key_store</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="o">::</span><span class="n">SHA256</span><span class="p">);</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">  </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">signature</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pki</span><span class="o">::</span><span class="n">sign</span><span class="p">(</span><span class="n">key_store</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="o">::</span><span class="n">SHA256</span><span class="p">);</span>
 </span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13"></a>
 </span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Signature (Hex):&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
 </span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">tancrypt</span><span class="o">::</span><span class="n">hexStr</span><span class="p">(</span><span class="n">signature</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
@@ -1453,12 +1437,12 @@
 <p class="admonition-title">Note</p>
 <p>Algorithm choice must match the algorithm which was used to sign the data, otherwise the operation will fail.</p>
 </div>
-<h3 id="rsaverifypkic-key-stdvectorunsigned-charsig-stdvectorunsigned-char-buffer-hashalg-alg"><code>RSA::verify(pkic&amp; key, std::vector&lt;unsigned char&gt;&amp;sig, std::vector&lt;unsigned char&gt; &amp;buffer, hashAlg alg)</code></h3>
+<h3 id="rsaverifypkic-key-dutilsdbuffersig-dutilsdbuffer-buffer-hashalg-alg"><code>RSA::verify(pkic&amp; key, dutils::dbuffer&amp;sig, dutils::dbuffer &amp;buffer, hashAlg alg)</code></h3>
 <ul>
 <li><strong>Parameters:</strong><ul>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">RSA</span><span class="o">::</span><span class="n">pkic</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span></code> - key container (must contain public key)</li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sig</span></code> - Singature data buffer</li>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span></code> - The data to verify</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">sig</span></code> - Singature data buffer</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="o">&amp;</span><span class="n">buffer</span></code> - The data to verify</li>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span></code> - Hashing algorithm to use for the digest</li>
 </ul>
 </li>

@@ -18,23 +18,21 @@ Example encryption:
 
 int main()
 {
-  // Data buffer setup
-  std::string my_message = "Hewwo I am secret ^.^";
-  std::vector<unsigned char> payload(my_message.size());
-  std::copy(my_message.data(),my_message.data()+my_message.size(),payload.data());
+  // Databuffer from string
+  dutils::dbuffer payload("Hewwo, I am secret ^.^");
 
   // Keypair with key size of 2048 gets generated and our buffer gets encrypted
-  tancrypt::RSA::pkic key_factory;
+  tancrypt::RSA::pkic key;
   key_factory.generate_keypair(2048);
-  std::vector<unsigned char> res = tancrypt::RSA::encrypt(key_factory,payload);
+  dutils::dbuffer res = tancrypt::RSA::encrypt(key,payload);
 
   // Check results compared original, hex x  encrypted
   std::cout << "Original:" << std::endl;
-  std::cout << my_message << std::endl;
+  std::cout << my_message.toStr() << std::endl;
   std::cout << "Hex:" << std::endl;
-  std::cout << tancrypt::hexStr(payload) << std::endl;
+  std::cout << dutils::hexStr(payload) << std::endl;
   std::cout << "Encrypted:" << std::endl;
-  std::cout << tancrypt::hexStr(res) << std::endl;
+  std::cout << dutils::hexStr(res) << std::endl;
 
   return 0;
 }

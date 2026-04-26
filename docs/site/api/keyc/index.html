@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#keyc" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -356,34 +361,6 @@
 
               
             
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/git-submodule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Git submodule
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
           </ul>
         </nav>
       
@@ -530,6 +507,26 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AES keyc
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -547,6 +544,208 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeskeyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AES::keyc()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycconst-dutilsdbuffer-keyaestype-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc(const dutils::dbuffer&amp; key,AES::Type type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycconst-dutilsdbuffer-keyaestype-typehashalg-alg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc(const dutils::dbuffer&amp; key,AES::Type type,hashAlg alg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes-supported-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES supported types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setter methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setter methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeysettypeaestype-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::key::setType(AES::Type type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycsethashalghashalg-alg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::setHashAlg(hashAlg alg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycsetkeydutilsdbuffer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::setKey(dutils::dbuffer key)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getter methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getter methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgetciphklen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getCiphKLen()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgethashalg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getHashAlg()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgethashenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getHashEnabled()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgetkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getKey()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -707,14 +906,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../helpers/" class="md-nav__link">
+      <a href="../dutils/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -834,6 +1033,199 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constructors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Constructors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aeskeyc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc()
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AES::keyc()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycconst-dutilsdbuffer-keyaestype-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc(const dutils::dbuffer&amp; key,AES::Type type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycconst-dutilsdbuffer-keyaestype-typehashalg-alg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc(const dutils::dbuffer&amp; key,AES::Type type,hashAlg alg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aes-supported-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES supported types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setter methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Setter methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeysettypeaestype-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::key::setType(AES::Type type)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycsethashalghashalg-alg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::setHashAlg(hashAlg alg)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycsetkeydutilsdbuffer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::setKey(dutils::dbuffer key)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getter-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Getter methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Getter methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgetciphklen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getCiphKLen()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgethashalg" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getHashAlg()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgethashenabled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getHashEnabled()
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aeskeycgetkey" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AES::keyc::getKey()
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -853,9 +1245,158 @@
   
 
 
-  <h1>AES keyc</h1>
-
-
+<h1 id="keyc">KEYC</h1>
+<h2 id="overview">Overview</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Please note that when constructing without a Hashing enabled on the keyc,
+you're expected to provide a properly padded key of correct length.
+If you do not want to handle your key enable hashing by constructing with <code>hashAlg</code>.</p>
+</div>
+<p>AES::keyc fulfills function of key container, similar to how <code>RSA::pkic</code> does, the <code>AES::keyc</code> stores a key and AES type.</p>
+<h2 id="constructors">Constructors</h2>
+<h2 id="aeskeyc"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="p">()</span></code></h2>
+<ul>
+<li><strong>Parameters:</strong></li>
+</ul>
+<p>Constructs blank keyc, you then need to manually setup the key container.<br />
+When using hashing via the keyc, you also need to enable the hashing not just set the hashAlg.</p>
+<p>Example of blank construction:
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1">// Blank key created</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1">// Setting AES type </span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="n">key</span><span class="p">.</span><span class="n">setType</span><span class="p">(</span><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">CBC256</span><span class="p">);</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">// Setting key assuming buffer is a key of proper size</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// Proper size can be acquired after setting the AES type via getCiphKLen().</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="kt">int</span><span class="w"> </span><span class="n">key_len</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">getCiphKLen</span><span class="p">();</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="n">key</span><span class="p">.</span><span class="n">setKey</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">// In case we do not have proper key in advance we can use built in hashing</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">// Blank key created</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="n">key</span><span class="p">;</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="c1">// Setting AES type </span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="n">key</span><span class="p">.</span><span class="n">setType</span><span class="p">(</span><span class="n">type</span><span class="p">);</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="c1">// Setting the key assuming arbitrary key data</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="n">key</span><span class="p">.</span><span class="n">setKey</span><span class="p">(</span><span class="n">buffer</span><span class="p">);</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1">// Setting hashing algorithm, though hashAlg::SHA256 is default</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="n">key</span><span class="p">.</span><span class="n">setHashAlg</span><span class="p">(</span><span class="n">hashAlg</span><span class="o">::</span><span class="n">SHA256</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="c1">// We must also enable hashing, otherwise it won&#39;t be used</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="n">key</span><span class="p">.</span><span class="n">setHashEnabled</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h3 id="aeskeycconst-dutilsdbuffer-keyaestype-type"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></h3>
+<p>When constructing without hashAlg, you must ensure your key data are prepadded</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="k">const</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span></code> - Prepadded key data</li>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span></code> - Type of AES algorithm to use</li>
+</ul>
+</li>
+<li><strong>Returns:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="n">key</span></code></li>
+</ul>
+</li>
+</ul>
+<h3 id="aeskeycconst-dutilsdbuffer-keyaestype-typehashalg-alg"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">key</span><span class="p">,</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span><span class="p">,</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Bear in mind that to avoid possible race conditions and unnecessary state holding,
+the hashing occurs on encryption runtime this may cause this key variant to be less efficient.</p>
+</div>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">key</span></code> - Key data</li>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span></code> - AES algorithm type</li>
+<li><code class="language-cpp highlight"><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span></code> - Hashing algorithm to use on key during encryption</li>
+</ul>
+</li>
+<li><strong>Returns:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="w"> </span><span class="n">key</span></code></li>
+</ul>
+</li>
+</ul>
+<h2 id="aes-supported-types">AES supported types</h2>
+<ul>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">CBC128</span></code> - AES-128-CBC</li>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">CBC192</span></code> - AES-192-CBC</li>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">CBC256</span></code> - AES-256-CBC</li>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">GCM128</span></code> - AES-128-GCM</li>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">GCM192</span></code> - AES-192-GCM</li>
+<li><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="o">::</span><span class="n">GCM256</span></code> - AES-256-GCM
+</br>
+</br></li>
+</ul>
+<h2 id="setter-methods">Setter methods</h2>
+<h3 id="aeskeysettypeaestype-type"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">key</span><span class="o">::</span><span class="n">setType</span><span class="p">(</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span><span class="p">)</span></code></h3>
+<p>Sets type of AES algorithm, does not corrupt key and can be used even past first initialization</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">AES</span><span class="o">::</span><span class="n">Type</span><span class="w"> </span><span class="n">type</span></code> - AES algorithm type</li>
+</ul>
+</li>
+<li><strong>Returns:</strong></li>
+</ul>
+<h3 id="aeskeycsethashalghashalg-alg"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">setHashAlg</span><span class="p">(</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
+<p>Sets hashing algorithm to be used for key, does not corrupt key and can be used even past first initialization</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span></code> - Hashing algorithm of your choice</li>
+</ul>
+</li>
+<li><strong>Returns:</strong></li>
+</ul>
+<h3 id="aeskeycsetkeydutilsdbuffer-key"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">setKey</span><span class="p">(</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">key</span><span class="p">)</span></code></h3>
+<p>Sets the key data</p>
+<ul>
+<li><strong>Parameters:</strong><ul>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="w"> </span><span class="n">key</span></code> - Key data buffer</li>
+</ul>
+</li>
+<li><strong>Returns:</strong></li>
+</ul>
+<h2 id="getter-methods">Getter methods</h2>
+<h3 id="aeskeycgetciphklen"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">getCiphKLen</span><span class="p">()</span></code></h3>
+<p>Retrieves required key size for given AES::Type, the key is required to have set type before using</p>
+<ul>
+<li><strong>Parameters:</strong></li>
+<li><strong>Returns:</strong><ul>
+<li><code>int key_len</code> - Key size</li>
+</ul>
+</li>
+</ul>
+<h3 id="aeskeycgethashalg"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">getHashAlg</span><span class="p">()</span></code></h3>
+<p>Retrieves currently set hasing algorithm</p>
+<ul>
+<li><strong>Parameters:</strong></li>
+<li><strong>Returns:</strong><ul>
+<li><code>hashAlg alg</code> - Current hashing algorithm</li>
+</ul>
+</li>
+</ul>
+<h3 id="aeskeycgethashenabled"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">getHashEnabled</span><span class="p">()</span></code></h3>
+<p>Retrieves current bool state - is hasing enabled ? true/false</p>
+<ul>
+<li><strong>Parameters:</strong></li>
+<li><strong>Returns:</strong><ul>
+<li><code>bool hashingEnabled</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="aeskeycgetkey"><code class="language-cpp highlight"><span class="n">AES</span><span class="o">::</span><span class="n">keyc</span><span class="o">::</span><span class="n">getKey</span><span class="p">()</span></code></h3>
+<p>Retrieves current key data buffer [readonly!]</p>
+<ul>
+<li><strong>Parameters:</strong></li>
+<li><strong>Returns:</strong><ul>
+<li><code>dutils::dbuffer key</code></li>
+</ul>
+</li>
+</ul>
 
 
 

@@ -9,7 +9,7 @@ nav:
  - Installation:
    - From source: install/source.md
    #- Packages: install/packages.md
-   - Git submodule: install/git-submodule.md
+   #- Git submodule: install/git-submodule.md
  - API:
    - AES:
      - Overview & operations: api/aes.md
@@ -18,7 +18,7 @@ nav:
      - Overview & Operations: api/rsa.md
      - PKIC: api/pkic.md
    - Hash: api/hash.md
-   - Helper functions: api/helpers.md
+   - Dutils: api/dutils.md
  - About:
    - License: license.md
 markdown_extensions:

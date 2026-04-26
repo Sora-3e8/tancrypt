@@ -12,7 +12,7 @@
         <link rel="prev" href="../pkic/">
       
       
-        <link rel="next" href="../helpers/">
+        <link rel="next" href="../dutils/">
       
       
         
@@ -348,34 +348,6 @@
     
   
     From source
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../install/git-submodule/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Git submodule
   
 
     
@@ -785,10 +757,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tancrypthashstdvectorunsigned-char-datahashalg-alg" class="md-nav__link">
+  <a href="#tancrypthashdutilsdbuffer-datahashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hash(std::vector&lt;unsigned char&gt;&amp; data,hashAlg alg)
+        tancrypt::hash(dutils::dbuffer&amp; data,hashAlg alg)
       
     </span>
   </a>
@@ -844,14 +816,14 @@
   
   
     <li class="md-nav__item">
-      <a href="../helpers/" class="md-nav__link">
+      <a href="../dutils/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
     
   
-    Helper functions
+    Dutils
   
 
     
@@ -1032,10 +1004,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#tancrypthashstdvectorunsigned-char-datahashalg-alg" class="md-nav__link">
+  <a href="#tancrypthashdutilsdbuffer-datahashalg-alg" class="md-nav__link">
     <span class="md-ellipsis">
       
-        tancrypt::hash(std::vector&lt;unsigned char&gt;&amp; data,hashAlg alg)
+        tancrypt::hash(dutils::dbuffer&amp; data,hashAlg alg)
       
     </span>
   </a>
@@ -1129,15 +1101,15 @@ Supported algorithms are directly provided by OpenSSL.</p>
 <h2 id="tancrypthash"><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hash</span></code></h2>
 <p>Provides hashing functionality required for sign and verify functions,<br />
 but can be also used independently.</p>
-<h3 id="tancrypthashstdvectorunsigned-char-datahashalg-alg"><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hash</span><span class="p">(</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
+<h3 id="tancrypthashdutilsdbuffer-datahashalg-alg"><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hash</span><span class="p">(</span><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span><span class="p">,</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span><span class="p">)</span></code></h3>
 <ul>
 <li><strong>Parameters:</strong><ul>
-<li><code class="language-cpp highlight"><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="o">&gt;&amp;</span><span class="w"> </span><span class="n">data</span></code> - Data buffer to hash</li>
+<li><code class="language-cpp highlight"><span class="n">dutils</span><span class="o">::</span><span class="n">dbuffer</span><span class="o">&amp;</span><span class="w"> </span><span class="n">data</span></code> - Data buffer to hash</li>
 <li><code class="language-cpp highlight"><span class="n">tancrypt</span><span class="o">::</span><span class="n">hashAlg</span><span class="w"> </span><span class="n">alg</span></code> - Algorithm to use for the digest.</li>
 </ul>
 </li>
 <li><strong>Returns:</strong><ul>
-<li><code>std::vector&lt;unsigned char&gt; data</code> - Hashed data buffer</li>
+<li><code>dutils::dbuffer data</code> - Hashed data buffer</li>
 </ul>
 </li>
 </ul>
